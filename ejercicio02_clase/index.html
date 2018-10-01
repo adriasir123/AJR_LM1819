@@ -6,7 +6,11 @@
         <title>ejercicio02</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
+    <body style="background-image: url('aa.jpg'); background-repeat: repeat-y">
+    <!-- <body style="background-image: url('aa.jpg'); background-repeat: no-repeat; background-position: center; background-attachment: fixed; background-size: cover"> Fixed lo que hará es poner la imagen en el centro de la pantalla,
+    mientras que cover lo que hará es con la imagen que se haya puesto, rellenar hasta que cubra toda la web con esa imagen-->
+    <!-- <body style="background-color: blue> Es mejor usar estilos css para los fondos y colores del background-->
+    <body style="background: url('aa.jpg') no-repeat center center fixed"></body>
         <!-- Enlaces -->
         <a href="http://www.google.es" target="_blank" hreflang="en" rel="bookmark" type="text/plain">Google</a>
         <!-- rel (bookmark, next, etc)  type (text/plain, text/html, text/css) -->
@@ -17,6 +21,18 @@
         <a href="carpeta/datos.html">Ir a Datos</a>
         <a href="nueva.html/#final">Ir al final de nueva</a>
         <a href="nueva.html/#final" target="_blank">Ir al final de nueva</a>
+
+        <!-- Imágenes -->
+        <img src="aa.jpg" alt="random" usemap="#formas" ismap="ismap">
+        <!-- con la etiqueta usemap, le estamos diciendo que use un mapa, pero él no sabe que eso es un mapa, hasta que con la etiqueta ismap, le decimos que es un mapa -->
+        <!-- lo que pongamos en alt, aparece en el caso de que la imagen no pueda cargar bien. En HTML5, no está permitido usar el width y el height, se pone con estilos-->
+        <!-- style="width: 250px; height: 250px; (se le pueden añadir éstos atributos a las etiquetas de imágenes)-->
+        <map name="formas" id="formas">
+            <area shape="rect" coords="26,290,194,540" href="http://www.google.es" target="_blank" />
+            <area shape="circle" coords="349,120,80" href="http://www.google.es" target="_blank" />
+            <area shape="poly" coords="31,17,86,51,57,142" href="http://www.amazon.com" target="_blank" />
+        </map>
+
     </body>
 </html>
 
