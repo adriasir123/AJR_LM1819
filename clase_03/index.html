@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tablas</title>
+    </head>
+    <body>
+        <table style="border:1px solid blue; border-collapse: collapse;" rules="groups"> <!-- border="1" -->
+            <caption>Días de la semana</caption>
+            <thead>
+                <tr>
+                    <th style="padding: 55px; margin-right: 60px; background: red">Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2" style="border: 1px solid red">1</td>
+                    <td colspan="2" style="border: 1px solid red">2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <!-- <td>
+                            <table style="border:1px solid blue; border-collapse: collapse" rules="groups"> border="1"
+                                <caption>Días de la semana</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Lunes</th>
+                                        <th>Martes</th>
+                                        <th>Miércoles</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2" style="border: 1px solid red">1</td>
+                                        <td colspan="2" style="border: 1px solid red">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>300</td>
+                                    </tr>
+                                </tfoot>
+                                 <tr style="border: 2px solid orange">
+                            </table>
+                        6
+                    </td> -->
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>100</td>
+                    <td>200</td>
+                    <td>300</td>
+                </tr>
+            </tfoot>
+            <!-- <tr style="border: 2px solid orange"> -->
+        </table>
+    </body>
+</html>
