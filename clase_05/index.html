@@ -1,0 +1,70 @@
+<!-- Formularios -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>formularios</title>
+    </head>
+    <body>
+        <form action="gestiondatos.jsp" method="GET">
+        <!--Action = página web a la que se manda el formulario
+            GET = La información saldrá en la url al mandar el formulario POST = la información aparecerá oculta en la url (no saldrá) -->
+        <!-- Name y nombre son algo parecido, ya que los dos sirven para identificar un input de los demás -->
+            <fieldset>
+                <legend>Datos usuario</legend>
+                <label for="nombre">Nombre de Usuario:</label>
+                <input type="text" value="" name="nombre" id="nombre" placeholder="Nombre de usuario" size="100" maxlength="20" pattern="[A-Z]{5}[0-9]{3}" />
+                <!-- pattern = son los requisitos que va a tener  -->
+                <!-- placeholder = lo que aparecerá en el campo cuando no tengamos nada escrito -->
+                <br />
+                <input type="password" name="pass" />
+                <br />
+                <input type="button" name="boton" value="Pulsar" />
+                <br />
+                <label for="pregunta">Alumno?</label>
+                <input type="radio" name="pregunta" id="pregunta" value="S" checked="checked" />Sí
+                <input type="radio" name="pregunta" id="pregunta" value="N" />No
+                <br />
+                <label>Aficiones</label>
+                <input type="checkbox" name="futbol" value="f" />Fútbol
+                <input type="checkbox" name="cine" value="c" />Cine
+                <br />
+                <label for="provincias">Provincias</label>
+                <select name="provincias" id="provincias">
+                    <optgroup label="Unos">
+                        <option value="SE">Sevilla</option>
+                    </optgroup>
+                    <optgroup label="Dos">
+                        <option value="CA">Cádiz</option>
+                        <option value="HU">Huelva</option>
+                    </optgroup>
+                </select>
+                <br />
+                <input type="file" name="archivo" />
+                <br />
+                <textarea name="descripcion" rows="10" cols="50" maxlength="20"></textarea>
+                <br />
+                <input type="reset" value="Borrar" />
+                <br />
+                <input type="submit" value="Enviar" />
+            </fieldset>
+        </form>
+        <br />
+        <br />
+        <br />
+        <form>
+            <input type="number" min="1" max="10" required="required" />
+            <input type="email" />
+            <input type="url" />
+            <input type="submit" />
+            <input type="date" />
+            <input type="time" />
+            <input type="datetime" />
+            <input type="month" />
+            <input type="search" />
+            <input type="tel" />
+            <input type="range" min="1" max="100" step="2"/>
+            <input type="color" />
+        </form>
+    </body>
+</html>
