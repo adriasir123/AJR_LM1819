@@ -8,44 +8,57 @@
     </head>
     <body>
         <form action="" method="GET">
-            <label>Nombre:</label>
-            <input type="text" name="nombre" id="nombre" value="" autofocus required/>
-            <br />
-            <label>Correo electrónico:</label>
-            <input type="email" name="email" id="email" value="" required/>
-            <br />
-            <label></label>
-            <input type="url" name="" id="" value=""/>
-            <br />
-            <label></label>
-            <input type="" name="" id="" value=""/>
-            <br />
-            <label></label>
-            <input type="" name="" id="" value=""/>
-            <br />
-            <label></label>
-            <input type="" name="" id="" value=""/>
-            <br />
-            <label></label>
-            <input type="" name="" id="" value=""/>
-            <br />
-            <label></label>
-            <input type="" name="" id="" value=""/>
-            <br />
-            <label></label>
-            <input type="" name="" id="" value=""/>
-            <br />
-            <label></label>
-            <input type="" name="" id="" value=""/>
-            <br />
-            <label></label>
-            <input type="" name="" id="" value=""/>
-            <br />
-            <label></label>
-            <input type="" name="" id="" value=""/>
-            <br />
+            <table>
+                <tr>
+                    <td><label>Nombre:</label></td>
+                    <td><input type="text" name="nombre" id="nombre" value="" autofocus required/></td>
+                </tr>
+                <tr>
+                    <td><label>Correo electrónico:</label></td>
+                    <td><input type="email" name="email" id="email" value="" required/></td>
+                </tr>           
+                <tr>
+                    <td><label>URL:</label></td>
+                    <td><input type="url" name="url" id="url" value="" placeholder="Escribe la URL de tu página web personal"/></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha:</label></td>
+                    <td><input type="date" name="date" id="date" value=""/></td>
+                </tr>
+                <tr>
+                    <td><label>Tiempo:</label></td>
+                    <td><input type="time" name="time" id="time" value=""/></td>
+                </tr> 
+                <tr>
+                    <td><label>Fecha y hora:</label></td>
+                    <td><input type="datetime" name="datetime" id="datetime" value=""/></td>
+                </tr>
+                <tr>
+                    <td><label>Mes:</label></td>
+                    <td><input type="month" name="month" id="month" value=""/></td>
+                </tr>
+                <tr>
+                    <td><label>Semana:</label></td>
+                    <td><input type="week" name="week" id="week" value=""/></td>
+                </tr>
+                <tr>
+                    <td><label>Número (mín -10, máx 10):</label></td>
+                    <td><input type="number" name="number" id="number" value="" min="-10" max="10"/></td>
+                </tr>
+                <tr>
+                    <td><label>Teléfono:</label></td>
+                    <td><input type="tel" name="tel" id="tel" value=""/></td>
+                </tr>
+                <tr>
+                    <td><label>Término de búsqueda:</label></td>
+                    <td><input type="search" name="search" id="search" value=""/></td>
+                </tr>
+                <tr>
+                    <td><label>Color favorito:</label></td>
+                    <td><input type="color" name="color" id="color" value=""/></td>
+                </tr>
+            </table>
             <input type="submit" name="enviar" id="enviar" value="Enviar"/>
-            <br />
         </form>        
     </body>
 </html>
