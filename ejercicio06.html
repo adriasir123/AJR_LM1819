@@ -64,8 +64,15 @@
                 </tr>
                 <!-- /Nuevos elementos input HTML5 -->
                 <tr>
-                    <td><label></label></td>
-                    <td><input type="" name="" id="" value=""/></td>
+                    <td><label>Elija su provincia:</label></td>
+                    <td>
+                        <input type="text" name="textoauto" id="textoauto" list="provincias" value=""/>
+                        <datalist id="provincias">
+                            <option value="Sevilla">
+                            <option value="Huelva">
+                            <option value="Cádiz">
+                        </datalist>
+                    </td>
                 </tr>
                 <tr>
                     <td><label>relleno obligatorio:</label></td>
@@ -80,8 +87,8 @@
                     <td><input type="file" name="file" id="file" value="" multiple/></td>
                 </tr>
                 <tr>
-                    <td><label>introduzca su contraseña</label></td>
-                    <td><input type="password" name="password" id="password" value="" minlength="8" pattern="[0-9][*][A-Z]"/></td>
+                    <td><label>introduzca su contraseña</label></td>                       <!--empezar por número y terminar con letra mayúscula-->
+                    <td><input type="password" name="password" id="password" value="" minlength="8" pattern="[0-9]{1}[a-zA-Z0-9]{1,}[A-Z]{1}"/></td>
                 </tr>
             </table>
             <input type="submit" name="enviar" id="enviar" value="Enviar"/>
