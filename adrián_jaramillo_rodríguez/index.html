@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exámen HTML</title>
+    </head>
+    <body>
+        <em>Text enfatizado</em><br>
+        <b>Texto en negrita</b><br/>
+        <i>Texto definición</i><br/>
+        Texto código fuente de ordenador<br/>
+        Texto ejemplo de código fuente de ordenador<br/>
+        Texto de teclado<br/>
+        <i>Variable</i><br/>
+        En ésta línea se muestra un texto tachado y se simula una corrección<br/>
+        <i>Esto es una cita</i> <blockquote style="padding:0px;margin0px;font-style:italic">Cita</blockquote><br/>
+        <span style="font-size:15pt">Este texto más grande</span> <span style="font-size:12pt">y este texto más grande</span><br/>
+        En este línea tenemos <sup>texto en superíndice</sup> y <sub>texto en subíndice</sub><br/>
+        <pre>              El texto en una etiqueta 'pre' mantiene los espacios        y
+saltos de línea</pre>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div style="width:45%;background-color:#FFFF00">
+            <div style="color:#FCA900;font-weight:bold;text-align:center;padding:10px;font-size:25pt">
+                Lista de enlaces
+            </div>
+            <ul style="font-size:15pt">
+                <li>
+                    Buscadores
+                    <ul>
+                        <li><a style="color:#952A6B" href="https://www.bing.com/" target="_blank">Bing</a></li>
+                        <li><a style="color:#2B9500;text-decoration: none"href="https://www.google.com/" target="_blank">Google</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Redes sociales
+                    <ul>
+                        <li><a style="color:#FF1200"href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                        <li><a style="color:#FF1200"href="https://twitter.com" target="_blank">Twitter</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h3 style="margin-bottom:5px;font-family:sans-serif">Encabezado Izquierda</h1>
+        <figure style="margin:0px;float:left">
+            <img src="img.png"/>
+            <figcaption style="font-family:sans-serif;padding-top:10px">Fig. 1 Descripción de la imagen</figcaption>
+        </figure>
+        <p style="font-family:sans-serif;font-size:16pt">
+            La música es, según la definición<br/>
+            tradicional del término, el arte de<br/>
+            organizar sensible y lógicamente una<br/>
+            combinación coherente de sonidos y<br/>
+            silencios utilizando los principios<br/>
+            fundamentales de la melodía, la<br/>
+            armonía y el ritmo, mediante la<br/>
+            intervención de complejos procesos<br/>
+            psico-anímicos
+        </p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <form>
+            <table>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>Asunto:</label></td>
+                    <td><input type="text" name="asunto"></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>* Primer Apellido:</label></td>
+                    <td><input type="text" name="primerapellido" required></in></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>Segundo Apellido:</label></td>
+                    <td><input type="text" name="segundoapellido"></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>* Nombre:</label></td>
+                    <td><input type="text" name="nombre" required></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>D.N.I / Pasaporte / NIE:</label></td>
+                    <td><input type="text" name="dni" pattern="[0-9]{8}[A-Z]{1}"></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>* Correo electrónico:</label></td>
+                    <td><input type="email" name="correo" required></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>Teléfono:</label></td>
+                    <td><input type="tel" name="tel"></td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>¿Sobre qué?:</label></td>
+                    <td>
+                        <input type="text" name="escribir" list="datalist1">
+                        <datalist id="datalist1">
+                            <option value="Tema1">
+                            <option value="Tema2">
+                            <option value="Tema3">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>¿Qué va a escribir?:</label></td>
+                    <td>
+                        <input type="text" name="escribir" list="datalist2">
+                        <datalist id="datalist2">
+                            <option value="Nota">
+                            <option value="Libro">
+                            <option value="novela">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align: top"><label>* Texto del escrito:</label></td>
+                    <td><textarea name="area" rows="1" cols="30"></textarea></td>
+                </tr>
+            </table>
+            <b>
+                Los datos personales facilitados son susceptibles de cesión cuando ésta sea<br/>
+                precisa para tramitar su contestación.
+            </b><br/>
+            <input style="color:#77604E" type="submit" value="Enviar">
+        </form>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div style="width:600px;border-top: 2px solid grey;border-bottom: 2px solid grey;padding-right: 10px;padding-left: 10px">
+            <div style="width:600px;height:100px;background-color:#0000FF;color: white;text-align: center;font-size: 20pt;vertical-align: middle">TÍTULO DE LA PÁGINA</div>
+            <div style="width: 400px;background-color:#444444;float:left;padding: 10px">
+                <div style="background-color:#01FF00;color:white;text-align: center;margin-bottom: 10px;padding: 20px;font-size: 20pt">CAPA 1</div>
+                <div style="background-color:#01FF00;color:white;text-align: center;margin-bottom: 10px;padding: 20px;font-size: 20pt">CAPA 2</div>
+                <div style="background-color:#01FF00;color:white;text-align: center;margin-bottom: 10px;padding: 20px;font-size: 20pt">CAPA 3</div>
+                <div style="background-color:#01FF00;color:white;text-align: center;margin-bottom: 10px;padding: 20px;font-size: 20pt">CAPA 4</div>
+            </div>
+            <div style="width: 160px;height: 328px;background-color:#777777;float: right;padding: 10px">
+                <div style="background-color:#5588FF;text-align: center;vertical-align: middle;margin-bottom: 10px;font-size: 20pt;color: white;padding-top: 63px;padding-bottom: 63px;padding-left: 40px;padding-right: 10px">CAPA 5</div>
+                <div style="background-color:#5588FF;text-align: center;vertical-align: middle;font-size: 20pt;color:white;padding-top: 63px;padding-bottom: 63px;padding-left: 40px;padding-right: 10px">CAPA 6</div>
+            </div>
+            <div style="width: 600px;height: 30px;background-color:red; clear: both"></div>
+        </div>
+    </body> 
+</html>
