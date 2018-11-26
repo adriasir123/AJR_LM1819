@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        /* Los media son como condicionales, que si se cumplen tales condiciones, se aplique tal css*/
+        @media only screen and (max-width:1500px) and (min-width:547px) {
+            body {
+                background: blue;
+            }
+        }
+        @media only screen and (max-width:794px) and (min-width:547px) {
+            body {
+                background: red;
+            }
+        }
+        @media only screen and (max-width:480px) {
+            body {
+                background: green;
+            }
+        }
+        @media print {
+            * {
+                font-family: 'Times New Roman', Times, serif
+            }
+        }
+        @media all and (orientation:portrait) {
+
+        }
+        @media all and (orientation:landscape) {
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>VIDEO</h1>
+    <video width="400px" height="300px" controls autoplay loop muted preload="auto" poster="">
+        <source src="jellyfish.mp4" type="video/mp4; codecs='avc1.42E01E'"/>
+        <source src="jellyfish.mp4" />
+        <source src="jellyfish.mp4" />
+        <!-- Si llega hasta aquí quiere decir que no ha podido reproducir ningún vídeo de los anteriores 
+        Va probando recursivamente los vídeos que hayamos dicho, hasta que encuentre uno que pueda reproducir -->
+        <p>Tu navegador no soporta HTML5</p>
+        <p>No se ha encontrado ningún vídeo</p>
+    </video>
+    <h2>AUDIO</h2>
+    <audio autoplay controls loop preload="auto">
+        <source src="sonido.mp3" type="audio/mpeg"/>
+        <source src="sonido.mp3" type="audio/mpeg"/>
+        <source src="sonido.mp3" type="audio/mpeg"/>
+    </audio>
+    <h1>IFRAME</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QoL4NHBpal4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12682.25367583084!2d-5.967407!3d37.37650595!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ses!4v1543236428926" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <h1>OBJECT</h1>
+    <object data="rebotes.swf" type="application/x-shockwave-flash">
+         <param name="movie" value="rebotes.swf" />
+         <param name="quality" value="high" />
+         <param name="wmode" value="transparent" />
+    </object>
+    <iframe src="datos.html" style="width:400px;height:300px"></iframe>
+    <object data="datos.html" type="text/html" style="width:400px;height:300px"></object>
+
+</body>
+</html>
