@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+}
+#banner {
+    background-color: #F29FAF;
+}
+.banner {
+    width: 80%;
+    margin-left: 10%;
+}
+/* MENÚ */
+#menu {
+    width: 100%;
+    background-color: #F29FAF;
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 25px;
+    padding: 15px;
+}
+
+li:hover {
+    background-color: white;
+    color: #F29FAF;
+}
+
+/* CONTENIDO*/
+p {
+
+}
