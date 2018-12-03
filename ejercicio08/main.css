@@ -1,0 +1,79 @@
+a, p {
+    font-size: 18px;
+}
+
+div a {
+    color: red;
+}
+
+div#capa1 {
+    background: blue;
+}
+
+.letraGrande {
+    font-size: 22px;
+}
+
+.nosubrayado {
+    text-decoration: none;
+}
+
+div#capa1 a.encima:hover {
+    background: gray;
+}
+
+div#capa1 a.encima:link {
+
+}
+
+
+div#capa1 a.encima:visited {
+    
+}
+
+
+div#capa1 a.encima:active {
+    
+}
+
+p#miparrafo:first-line {
+    color: red;
+    font-size: 40px;
+}
+
+p#miparrafo:first-letter {
+    color: blue;
+    font-size: 40px;
+}
+
+div#capa1 * {
+    background: yellow;
+}
+
+div > a {
+    /* Los enlaces CUYO PADRE sea un div. PADRE DIRECTO*/
+    font-style: italic;
+}
+
+div.capa2 {
+    border: 1px solid black;
+}
+
+a[href^="https"] {
+    /* ^ = Comienza con*/
+    color: orange;
+}
+
+a[href$="pdf"] {
+    /*$ = Termina con*/
+    color: green;
+}
+
+p[align="center"] {
+    /*Dentro irían valores de atributos*/
+    background: blue;
+}
+
+div + p {
+    font-size: 50px;
+}
