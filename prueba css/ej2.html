@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ejercicio2</title>
+        <style>
+            p,span,h1 {
+                font-weight: bold;
+            }
+            #primera {
+                background-color: blue;
+            }
+            div p {
+                font-style: italic;
+            }
+            .bloque:hover {
+                font-size: 60px;
+            }
+            .first::first-letter {
+                font-size: 60px;
+            }
+            a[href$=".com"] {
+                text-decoration: none;
+            }
+            div a {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="primera">
+            <p class="first">
+                La primera letra de éste párrafo sera muuuy grande
+            </p>
+            <p class="bloque">
+                Cuando pases el ratón por encima de éste párrafo, el tamaño de la fuente aumentará
+            </p>
+            <p>
+                Éste es el párrafo 3
+            </p>
+        </div>
+        <div>
+            <a href="www.web.com">enlace_sin_subrayado</a>
+            <a href="www.web.net">enlace_color_rojo</a>
+            <a href="www.web.es">enlace_color_rojo</a>
+        </div>
+    </body>
+</html>

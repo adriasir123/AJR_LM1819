@@ -1,0 +1,177 @@
+/*=============================CONTENEDOR PRINCIPAL=============================*/
+#principal {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
+
+/*=============================HEADER=============================*/
+header {
+    border-bottom: 3px solid #EDEDED;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+/*=============================NAV=============================*/
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 8px;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #838C92;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*=============================SECCIÓN PRINCIPAL=============================*/
+/*=============================PRIMER ARTÍCULO=============================*/
+#primero {
+    background-color: #343A40;
+    padding: 30px;
+    color: white;
+    margin-bottom: 30px;
+}
+#primero_1 {
+    font-style: italic;
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    display: block;
+}
+#primero_2 {
+    display: block;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #EDEDF0;
+}
+#primero_3 a{
+    display: block;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+/*=============================SEGUNDO ARTÍCULO=============================*/
+#segundo{
+    border: 2px solid grey;
+    width: 35%;
+    display: inline-block;
+}
+#segundo header {
+    text-align: left;
+    font-family: sans-serif;
+    padding: 0px;
+    font-size: 20px;
+    border-bottom: none;
+}
+#segundo header span {
+    font-size: 15px;
+    color: grey;;
+}
+
+
+#segundo aside {
+    background-color: #55595C;
+    text-align: center;
+    padding: 30px;
+}
+#segundo #enl1 {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #0F7BFF;
+    font-weight: bold;
+}
+#segundo #enl2 {
+    text-decoration: none;
+    color: #5CBCFF;
+}
+#segundo > article {
+    padding: 15px;
+}
+
+
+/*=============================TERCER ARTÍCULO=============================*/
+#tercero{
+    border: 2px solid grey;
+    width: 35%;
+    display: inline-block;
+    float: right;
+}
+#tercero header {
+    text-align: left;
+    font-family: sans-serif;
+    padding: 0px;
+    font-size: 20px;
+    border-bottom: none;
+}
+#tercero header span {
+    font-size: 15px;
+    color: grey;
+}
+
+
+#tercero aside {
+    background-color: #55595C;
+    text-align: center;
+    padding: 30px;
+}
+#tercero #enl1 {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #30A76A;
+    font-weight: bold;
+}
+#tercero #enl2 {
+    text-decoration: none;
+    color: #5CBCFF;
+}
+#tercero > article {
+    padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================FOOTER=============================*/
+footer {
+    background-color: #F9F9F9;
+    padding: 30px;
+    text-align: center;
+}
+.footerspan {
+    color: #3E9AFD;
+}
+footer a {
+    text-decoration: none;
+    color: #3E9AFD;
+}
