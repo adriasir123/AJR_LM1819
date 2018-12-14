@@ -11,7 +11,7 @@ body {
     border: 5px solid black;
 }
 
-header {
+#headerprinc {
     background-color: #ABEAAB;
     padding: 30px;
 }
@@ -32,11 +32,16 @@ header {
     float: left;
 }
 
-.menu {
+
+
+
+/* =======MENÚS=======*/
+
+#menuno {
     background: #A9D1E8;
 }
 
-.menu li {
+#menuno li {
     display: inline-block;
     list-style: none;
     padding: 10px;
@@ -45,6 +50,26 @@ header {
     color: #6186A7;
     border: 1px solid #8EB6CD;
 }
+
+#menudos {
+    background: #F8B48A;
+}
+
+#menudos li {
+    display: inline-block;
+    list-style: none;
+    padding: 8px;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #7C8E7D;
+}
+
+
+/*===================================*/
+
+
+
+
 
 nav ul {
     margin: 0px;
@@ -59,14 +84,89 @@ section {
 section nav {
     background-color: #F8B48A;
 }
-
-
-
-
-
-
+#barra {
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #6186A7;
+    border: none;
+}
 
 
 aside {
+    
+}
+
+
+
+/*=========CUADRO NARANJA=========*/
+
+#header_nara {
+    background-color: #FFBA90;
+    color: #6E8A7C;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: sans-serif;
+}
+
+#vacio_nara {
+    background-color: #C68258;
+    height: 280px;
+}
+
+#arti_nara {
+    background-color: #FFBA90;
+    font-family: sans-serif;
+    color: #B85F57;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#pie_nara {
+    background-color: #F9B68B;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#se_nara {
+    color: #788D7D;
+}
+
+#re_nara {
+    color: #C98262;
+
+}
+#por_aba {
+    padding: 20px;
+    border-bottom: 2px solid grey;
+    background-color: #FFBA90;
+}
+
+/*=======EL ASIDE==========*/
+
+.head_asi {
+    font-family: sans-serif;
+    color: #7F7EA2;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #B5ACAC;
+    background-color: #BAB0C5;
+}
+
+.arti_asi {
+    background-color: #C4BACF;
+}
+
+.abz {
+    color: blue;
     
 }
