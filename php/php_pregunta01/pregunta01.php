@@ -14,7 +14,7 @@
         "El valor es 5" en verde.*/
         $numero = rand(1,10);
         if ($numero < 5) {
-            echo "<span style='color:red'>El valor" .  $numero . " es menor que 5</span";
+            echo "<span style='color:red'>El valor" .  $numero . " es menor que 5</span"; //Con los echo no hace falta concatenar las cadenas con las variables
         }
         else if ($numero > 5) {
             echo "<span style='color:blue'>El valor". $numero . " es mayor que 5</span";
