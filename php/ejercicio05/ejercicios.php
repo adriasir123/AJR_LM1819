@@ -8,8 +8,23 @@
 </head>
 <body>
     <?php
-        // function pase nombre de fichero y devuelva su extensión fichero y la devuelve en mayúscula
-        print "holaa";
+        function calcularExtension($fichero) {
+            $nombreExt = explode(".", $fichero);
+            return strtoupper($nombreExt[1]);
+        }
+        $nombreFichero = "fichero.txt";
+        $ext = calcularExtension($nombreFichero);
+        print "<p>La extensión del archivo $nombreFichero es $ext</p>";
+        //Hace lo mismo que la de arriba, pero da igual si hay más puntos de por medio en el nombre del
+        //fichero
+        function calcularExtension($fichero) {
+            //$nombreExt = explode(".", $fichero);
+            $inicio = strrpos($fichero, ".") + 1; //+1 posición siguiente al punto
+            return strtoupper(substr($fichero, $inicio));
+        }
+        $nombreFichero = "fichero.exe.txt";
+        $ext = calcularExtension($nombreFichero);
+        print "<p>La extensión del archivo $nombreFichero es $ext</p>";
     ?>
 </body>
 </html>
