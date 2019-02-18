@@ -7,29 +7,12 @@
     <title>ej1</title>
 </head>
 <body>
-    <form action="resultado.php" enctype="multipart/form-data" method="POST">
-        <!--
-            enctype="multipart/form-data" sirve para que al enviar archivos
-            en el input file, la variable $_FILES se rellene con datos
-        -->
-        <p><label>Nombre: </label><input type="text" name="nombre"></p>
-        <p><label>Pass: </label><input type="password" name="clave"></p>
-        <p><label>Descripción: </label><textarea rows="5" cols="5" name="descrip">
-            Esta es la descripción</textarea>
-        </p>
-        <p><input type="checkbox" name="opcion" value="123">Opción</p> <!-- El checkbox sólo se envía si está marcado -->
-        <p>
-            <input type="radio" name="datos" value="66" checked>Dato1
-            <input type="radio" name="datos" value="77">Dato2
-        </p>
-        <p>
-            <select name="seleccion[]" multiple="multiple">
-                <option value="1">Uno</option>
-                <option value="2">Dos</option>
-            </select>
-        </p>
-        <p><label>Fichero: </label><input type="file" name="fichero"></p>
-        <p><input type="submit" value="Enviar"></p>
+    <form action="ej1.php" enctype="multipart/form-data" method="POST">
+        <label for="pies">Introduzca un valor de pies: </label>
+        <input type="text" name="pies" id="pies"><br/>
+        <label for="pulgadas">Introduzca un valor de pulgadas: </label>
+        <input type="text" name="pulgadas" id="pulgadas"><br/>
+        <input type="submit" value="Enviar"></p>
     </form>
 </body>
 </html>
