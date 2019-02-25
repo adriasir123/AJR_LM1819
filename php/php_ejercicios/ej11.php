@@ -21,10 +21,10 @@
 
 	//Conversión
 
-	if ($se == Do) {
+	if ($se == "Do") {
 		$result = $euros*convertDo;
 		echo "$euros € son $result $";
-	} else if ($se == Li) {
+	} else if ($se == "Li") {
 		$result = $euros*convertLi;
 		echo "$euros € son $result £";
 	} else {
