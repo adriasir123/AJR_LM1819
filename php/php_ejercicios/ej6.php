@@ -1,6 +1,6 @@
 <?php
   //Escriba dos números enteros para
-  comprobar si uno es múltiplo del otro
+  //comprobar si uno es múltiplo del otro
   
   
   $num1 = $_REQUEST['num1'];
