@@ -4,20 +4,26 @@
     //sean números y positivos. El índice de masa corporal es
     //peso / altura al cuadrado en metros.
     
-    $tabla = trim(htmlspecialchars(strip_tags($_REQUEST["tabla"]), ENT_QUOTES, "UTF-8"));    
+    $peso = trim(htmlspecialchars(strip_tags($_REQUEST["peso"]), ENT_QUOTES, "UTF-8"));
+    $altura = trim(htmlspecialchars(strip_tags($_REQUEST["altura"]), ENT_QUOTES, "UTF-8"));    
 
-    if (!empty($tabla)) {
-        if (filter_var($tabla, FILTER_VALIDATE_INT) && $tabla >= 0) {
-            for ($c=1; $c<=10; $c++){
-                $resul = $tabla*$c;
-                echo "$tabla X $c = $resul<br/>";          
-            } 
+
+    if (!empty($peso) && !empty($altura)) {
+        if (is_numeric($peso) && is_numeric($altura) && $peso >= 0 && $altura >= 0) {
+            //Pasada de altura en cm a m
+            $alturaM = $altura/100;
+            //Altura al cuadrado
+            $alturaCM = $alturaM*$alturaM;
+            //Cálculo de índice de masa corporal
+            $indMC = $peso/$alturaCM;
+
+            echo "Usted pesa $peso KG, y mide $alturaM M.<br/>Por lo tanto, su IMC (índice de masa corporal) resultante es:<br/>$indMC";
         } else {
-            echo "El valor introducido debe ser un número entero y positivo";
+            echo "Los valores a introducir deben ser números positivos";
         }
     
     } else {
-        echo "Rellene el campo por favor";
+        echo "Rellene ambos campos por favor";
     }
 
 ?>
