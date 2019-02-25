@@ -3,15 +3,17 @@
   //en los años.
   
   //MÉTODO PARA COMPROBAR SI EL AÑO ES BISIESTO
-  // 1. If the year is evenly divisible by 4, go to step 2. Otherwise, go to step 5.
-  // 2. If the year is evenly divisible by 100, go to step 3. Otherwise, go to step 4.
-  // 3. If the year is evenly divisible by 400, go to step 4. Otherwise, go to step 5.
-  // 4. The year is a leap year (it has 366 days).
-  // 5. The year is not a leap year (it has 365 days). 
+  // 1. Si el año es divisible por 4, ir al paso 2. Sino, ir al paso 5.
+  // 2. Si el año es divisible por 100, ir al paso 3. Sino, ir al paso 4.
+  // 3. Si el año es divisible por 400, ir al paso 4. Sino, ir al paso 5.
+  // 4. El año es bisiesto. 
+  // 5. El año no es bisiesto.
 
   $anyo = $_REQUEST['anyo'];
-  
-  if ($anyo%4 == 0 && $anyo%100 == 0 && $anyo%400 == 0) {
+
+  if ($anyo%4 == 0) {
+    if ($anyo%100 == 0) {
+      if ($anyo%400 == 0) {
         echo "El año es bisiesto";
       } else {
         echo "El año no es bisiesto";
@@ -19,8 +21,8 @@
     } else {
       echo "El año es bisiesto";
     }
-	  
   } else {
-	  echo "El año no es bisiesto";
-	}
+    echo "El año no es bisiesto";
+  }
+
 ?>
