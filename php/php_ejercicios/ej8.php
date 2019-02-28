@@ -10,7 +10,7 @@
     echo "$distancia cm son $resultKM KM<br/>";
     echo "$distancia cm son $resultM M<br/>";
   } else {
-	  echo "El campo no pueden estar vacío. Se debe rellenar SÓLO con un número";
+	  echo "El campo no puede estar vacío. Se debe rellenar SÓLO con un número";
 	}
 
 ?>
