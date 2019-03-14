@@ -4,40 +4,31 @@
     //son un número entero o decimal mayor o igual que cero. Un pie son doce pulgadas y una
     //pulgada son 2,54 cm.
     
-    $converPC = 30.48;
-    $converPlC = 2.54;
+
+    //CONSTANTES Y VARIABLES
+    define('converPiC', 30.48); //Conversor pies - cm
+    define('converPlC', 2.54);  //Conversor pulgadas - cm
     $pies = trim(htmlspecialchars(strip_tags($_REQUEST["pies"]), ENT_QUOTES, "UTF-8"));
     $pulgadas = trim(htmlspecialchars(strip_tags($_REQUEST["pulgadas"]), ENT_QUOTES, "UTF-8"));
 
 
-    if ( (!empty($pies)) && (!empty($pulgadas)) ) {
-        if ( (is_numeric($pies)) && (is_numeric($pulgadas)) ) {
-            //Apartado de los pies
-            if ( (filter_var($pies, FILTER_VALIDATE_INT)) && ($pies >= 0) ) {
-                $resultadoPI = $pies*$converPC;
-                print "<b>CONVERSIÓN PIES - CENTÍMETROS</b><br/>";
-                print "$pies pies son $resultadoPI centímetros<br/><br/>";
-            } else {
-                print "<b>Error en pies</b><br/>";
-                print "Debe introducir un número entero mayor o igual que cero<br/><br/>";
-            }
-            //Apartado de las pulgadas
-            if ($pulgadas >= 0) {
-                $resultadoPU = $pulgadas*$converPlC;
-                print "<b>CONVERSIÓN PULGADAS - CENTÍMETROS</b><br/>";
-                print "$pulgadas pulgadas son $resultadoPU centímetros";
-            } else {
-                print "<b>Error en pulgadas</b><br/>";
-                print "Debe introducir un número mayor o igual que cero";
-            }
-        } else {
-            print "Error, ambos valores deben ser numéricos";
-        }
+    //MAIN
+    if (!empty($pies) && !empty($pulgadas) && filter_var($pies, FILTER_VALIDATE_INT) && $pies >= 0 && is_numeric($pulgadas) && $pulgadas >= 0) {
+        $resultadoPiC = $pies*converPiC; //Resultado pies - cm
+        echo "<b>CONVERSIÓN PIES - CENTÍMETROS</b><br/>";
+        echo "$pies pies son $resultadoPiC centímetros<br/><br/>";
+
+        $resultadoPlC = $pulgadas*converPlC; //Resultado pulgadas - cm
+        echo "<b>CONVERSIÓN PULGADAS - CENTÍMETROS</b><br/>";
+        echo "$pulgadas pulgadas son $resultadoPlC centímetros";
+
     } else {
-        print "Para que todo funcione, debe rellenar TODOS los campos del formulario";
+        echo "
+            <h2>ERROR</h2>
+            Ambos campos deben estar rellenos<br/>
+            El campo pies debe estar relleno con un número entero mayor o igual que cero<br/>
+            El campo pulgadas debe estar relleno con un número entero o decimal mayor o igual que cero
+        ";
     }
-
-    
-
-
+        
 ?>

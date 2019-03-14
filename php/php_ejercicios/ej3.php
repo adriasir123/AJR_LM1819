@@ -8,7 +8,12 @@
     $temp = trim(htmlspecialchars(strip_tags($_REQUEST["temp"]), ENT_QUOTES, "UTF-8"));
     $se = trim(htmlspecialchars(strip_tags($_REQUEST["select"]), ENT_QUOTES, "UTF-8"));
 
-    if (!empty($temp) && filter_var($temp, FILTER_VALIDATE_FLOAT)) {
+    //EXPLICACIÓN STRPOS
+    //Con strpos estamos buscando si hay algún punto en el valor que contenga $temp
+    //Si hay, entonces puede devolver true u "otra cosa". Lo que es seguro es que si no
+    //encuentra un punto, devuelve false, así que por eso se dice que... 
+    //SI NO ES IGUAL A FALSO, OSEA QUE ENCONTRÓ UN PUNTO, SIGNIFICA QUE ES UN NÚMERO DECIMAL
+    if (!empty($temp) && is_numeric($temp) && strpos($temp, '.') !== false) {
       if ($se == "celsius" && $temp >= -273.15) {
           $result = round(32+(1.8*$temp), 2);
           echo "$temp ºC = $result ºF";
@@ -22,15 +27,5 @@
     } else {
         echo "Rellene el campo con un número decimal, por favor";
     }
-
-
-
-
-
-
-
-
-
-
 
 ?>

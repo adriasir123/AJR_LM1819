@@ -21,15 +21,20 @@
 
 	//Conversión
 
-	if ($se == "Do") {
-		$result = $euros*convertDo;
-		echo "$euros € son $result $";
-	} else if ($se == "Li") {
-		$result = $euros*convertLi;
-		echo "$euros € son $result £";
+	if (!empty($euros) && is_numeric($euros)) {
+		if ($se == "Do") {
+			$result = $euros*convertDo;
+			echo "$euros € son $result $";
+		} else if ($se == "Li") {
+			$result = $euros*convertLi;
+			echo "$euros € son $result £";
+		} else {
+			$result = $euros*convertYe;
+			echo "$euros € son $result ¥"; 
+		}
 	} else {
-		$result = $euros*convertYe;
-		echo "$euros € son $result ¥"; 
+		echo "Introduzca un valor en euros válido por favor";
 	}
+
 
 ?>
