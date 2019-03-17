@@ -9,7 +9,7 @@
 <body>
     <?php
         //Nombre cookie, valor, y expiración
-        setcookie("nombreUsu", "Javier", 0);
+        setcookie("nombreUsu", "Javier", 0); //Con la expiración a 0, hacemos que nunca expire la cookie (sólo se elimina cuando se cierra el navegador)
     ?>
     <p>
         <a href="primera.php">Ir a Primera</a>

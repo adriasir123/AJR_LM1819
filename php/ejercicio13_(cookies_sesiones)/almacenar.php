@@ -14,7 +14,7 @@
         if (isset($_REQUEST['recordar'])) {
             setcookie ("mailUsu", $email, time()+60*60*24*365);
         } else {
-            setcookie ("mailUsu", $email, time()-1000);
+            setcookie ("mailUsu", $email, time()-1000); //Con un tiempo negativo, hacemos que "ya expirase", por lo tanto la cookie se borra
         }
     ?>
     <p>

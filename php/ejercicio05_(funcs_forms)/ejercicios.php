@@ -9,7 +9,7 @@
 <body>
     <?php
         function calcularExtension($fichero) {
-            $nombreExt = explode(".", $fichero);
+            $nombreExt = explode(".", $fichero); //Explode parte un string a partir de un delimitador, y crea un array con las partes
             return strtoupper($nombreExt[1]);
         }
         $nombreFichero = "fichero.txt";

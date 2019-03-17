@@ -13,7 +13,7 @@
         print "<p>Hola</p>\n";
         $saludo = "Holaaa";
         echo "<b>$saludo</b>";
-        echo "<br/>Mensaje: <b>" . $saludo . "</b>. Fin mensaje</br>"
+        echo "<br/>Mensaje: <b>" . $saludo . "</b>. Fin mensaje</br>";
     ?>
     <?=$saludo?>
 
@@ -107,11 +107,23 @@
         print "<p>EL valor de PI es " . PI . "</p>"; //Variables en minúscula, constantes en mayúscula. Las constantes no deben cambiar de valor, valor fijo
 
         print "<pre>";
-        print_r(get_defined_constants());
+        print_r(get_defined_constants()); //Función que muestra todas las constantes definidas
         print "</pre>";
 
+
+
+        //EXPLICACIÓN DE LAS 2 ÚLTIMAS FUNCIONES
+        //PHP_INT_MAX (integer)
+        //The largest integer supported in this build of PHP. Usually int(2147483647). Available since PHP 5.0.5
+        //
+        //PHP_INT_SIZE (integer)
+        //The size of an integer in bytes in this build of PHP. Available since PHP 5.0.5 
+        
         $maximo = PHP_INT_MAX;
+        $maximo2 = PHP_INT_SIZE;
         echo $maximo;
+        echo "<br/>";
+        echo $maximo2;
     ?>
 </body>
 </html>

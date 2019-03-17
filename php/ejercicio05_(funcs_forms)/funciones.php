@@ -11,7 +11,7 @@
         //Una función o devuelve algo, o no devuelve nada
         //Se le tiene que llamar con tantos parámetros como tenga, sino ERROR
         function calculaHipotenusa($par1, $par2) {
-            $hipo = sqrt($par1*$par1 + $par2*par2);
+            $hipo = sqrt($par1*$par1 + $par2*$par2); //SQRT = función que calcula la raíz cuadrada
             return $hipo;
         }
         function imprimir1($mensaje) {
@@ -27,8 +27,8 @@
         $hipotenusa = calculaHipotenusa($cat1, $cat2);
         print "<p>El triángulo de lados $cat1, $cat2 e hipotenusa $hipotenusa</p>";
 
-        imprimir1();
-        imprimir2("Hola que tal");
+        imprimir1("Hola que tal");
+        imprimir2();
     ?>    
 </body>
 </html>
