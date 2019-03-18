@@ -7,7 +7,7 @@
         <title>pregunta03</title>
     </head>
     <body>
-        <?php //1. Desarrolle un ejercicio que muestre las tablas de multiplicar 
+        <?php //1. Desarrolle un ejercicio que muestre las tablas de multiplicar
             $i=1;
             for ($i=1;$i<=10;$i++) {
                 print "<div style='border: 1px solid black'>";
@@ -23,11 +23,11 @@
         //2. Mostramos los números de los días del 1 a la fecha actual.
         //Ejemplo: si hoy es 11 debe mostrar los números del 1 al 11.
             $hoy=date("j");
-            for ($i=1; $i<=$hoy ; $i++) { 
-                echo "Día $i <br/>";    
+            for ($i=1; $i<=$hoy ; $i++) {
+                echo "Día $i <br/>";
             }
         ?>
-        <?php 
+        <?php
             //3. Dado un vector de números positivos desordenado, recórralo y muestre lo
             //3 números mayores.
             echo "<br/><br/>A continuación veremos el contenido del array <br/><br/>";
@@ -42,7 +42,7 @@
             print "<br/>";
             print "<br/>";
 
-            for ($i=0; $i<3 ; $i++) { 
+            for ($i=0; $i<3 ; $i++) {
                 if ($i==0) {
                     echo "Este es el mayor de todos los números: $array[$i]<br/>";
                 }   else if ($i==1) {
