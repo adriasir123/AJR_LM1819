@@ -43,7 +43,7 @@
                                 or die("Problemas en la consulta: ".mysqli_error($conexion));
 
                             while ($reg = mysqli_fetch_array($tipos)) {
-                                echo "<option value='$reg[cod]'>$reg[desc]</option>";
+                                echo "<option value='$reg[id]'>$reg[desc]</option>";
                             }
                         ?>
                     </select>
