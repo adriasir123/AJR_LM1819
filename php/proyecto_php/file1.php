@@ -12,32 +12,40 @@
         crossorigin="anonymous">
 </head>
 <body>
+    <?php
+        $conexion = mysqli_connect("localhost", "root", "", "weather_station")
+        or die("Problemas de conexión");
+    ?>
     <div class="container">
+        <h1 class="display-1 text-center">Weather Station</h1>
         <form action="file1.php">
             <!-- CAMPO FECHA DESDE -->
             <div class="form-group row">
                 <label for="fechadesde" class="col-sm-2 col-form-label col-form-label-lg">Fecha desde:</label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-lg" id="fechadesde">
+                    <input type="date" class="form-control form-control-lg" name="fechadesde" id="fechadesde">
                 </div>
             </div>
             <!-- CAMPO FECHA HASTA -->
             <div class="form-group row">
                 <label for="fechahasta" class="col-sm-2 col-form-label col-form-label-lg">Fecha hasta:</label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-lg" id="fechahasta">
+                    <input type="date" class="form-control form-control-lg" name="fechahasta" id="fechahasta">
                 </div>
             </div>
             <!-- TIPO MEDIDA -->
             <div class="form-group row">
                 <label for="valor" class="col-sm-2 col-form-label col-form-label-lg">Tipo Medida:</label>
                 <div class="col-sm-10">
-                    <select class="form-control form-control-lg" id="valor">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <select class="form-control form-control-lg" name="tipome" id="valor">
+                        <?php
+                            $tipos = mysqli_query($conexion, "SELECT * FROM variables")
+                                or die("Problemas en la consulta: ".mysqli_error($conexion));
+
+                            while ($reg = mysqli_fetch_array($tipos)) {
+                                echo "<option value='$reg[cod]'>$reg[desc]</option>";
+                            }
+                        ?>
                     </select>
                 </div>
                
@@ -46,31 +54,60 @@
             <div class="form-group row">
             <label for="valor" class="col-sm-2 col-form-label col-form-label-lg">Valor Medida:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-lg" id="valor">
+                    <input type="text" class="form-control form-control-lg" name="valorme" id="valor">
                 </div>
             </div>
 
             <!-- BUSCAR -->
             <div class="form-group row">
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Buscar</button>
-                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Buscar</button>
             </div>
         </form>
+
+
+        <table class="table table-striped table-dark text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Unidad Medida</th>
+                    <th scope="col">Sensor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <button type="button" class="btn btn-danger btn-block">Restablecer</button>
+        
         <?php
-            $nombre = trim(htmlspecialchars(strip_tags($_REQUEST["nombre"]), ENT_QUOTES, "UTF-8"));
-            $email = trim(htmlspecialchars(strip_tags($_REQUEST["email"]), ENT_QUOTES, "UTF-8"));
-            $curso = trim(htmlspecialchars(strip_tags($_REQUEST["curso"]), ENT_QUOTES, "UTF-8"));
+            //$fechadesde = trim(htmlspecialchars(strip_tags($_REQUEST["fechadesde"]), ENT_QUOTES, "UTF-8"));
+            //$fechahasta = trim(htmlspecialchars(strip_tags($_REQUEST["fechahasta"]), ENT_QUOTES, "UTF-8"));
+            //$tipome = trim(htmlspecialchars(strip_tags($_REQUEST["tipome"]), ENT_QUOTES, "UTF-8"));
+            // $valorme = trim(htmlspecialchars(strip_tags($_REQUEST["valorme"]), ENT_QUOTES, "UTF-8"));
 
             $conexion = mysqli_connect("localhost", "root", "", "cursophp")
-                or die("Problemas de conexión");
+            or die("Problemas de conexión");
             mysqli_query($conexion,
-                "INSERT INTO alumnos(nombre, mail, codigocurso) VALUES ('$nombre','$email',$curso)") //Se ponen comillas porque son cadenas de texto, y no se le ponen en curso porque se almacenan números
-                or die("Problemas en el insert". mysqli_error($conexion));
+            "INSERT INTO alumnos(nombre, mail, codigocurso) VALUES ('$nombre','$email',$curso)") //Se ponen comillas porque son cadenas de texto, y no se le ponen en curso porque se almacenan números
+            or die("Problemas en el insert". mysqli_error($conexion));
 
             mysqli_close($conexion);
 
             print "<h2>Alumno dado de alta</h2>";
+
+
+
+
 
 
         ?>
