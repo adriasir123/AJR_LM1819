@@ -19,25 +19,27 @@
     <div class="container">
         <h1 class="display-1 text-center">Weather Station</h1>
         <form action="file1.php">
-            <!-- CAMPO FECHA DESDE -->
-            <div class="form-group row">
-                <label for="fechadesde" class="col-sm-2 col-form-label col-form-label-lg">Fecha desde:</label>
-                <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-lg" name="fechadesde" id="fechadesde">
+            <!-- CAMPOS: FECHA DESDE, FECHA HASTA  -->
+            <div class="form-row text-center">
+                <div class="form-group col-md-3">
+                    <label for="fechadesde">Fecha desde:</label>
+                    <input type="date" class="form-control" name="fechadesde" id="fechadesde">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="fechahasta">Fecha hasta:</label>
+                    <input type="date" class="form-control" name="fechahasta" id="fechahasta">
+                </div>
+                <!-- BUSCAR -->
+                <div class="form-group col-md-6">
+                    <button type="submit" class="btn btn-primary btn-block" style="height:300px">Buscar</button>
                 </div>
             </div>
-            <!-- CAMPO FECHA HASTA -->
-            <div class="form-group row">
-                <label for="fechahasta" class="col-sm-2 col-form-label col-form-label-lg">Fecha hasta:</label>
-                <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-lg" name="fechahasta" id="fechahasta">
-                </div>
-            </div>
+
             <!-- TIPO MEDIDA -->
-            <div class="form-group row">
-                <label for="valor" class="col-sm-2 col-form-label col-form-label-lg">Tipo Medida:</label>
-                <div class="col-sm-10">
-                    <select class="form-control form-control-lg" name="tipome" id="valor">
+            <div class="form-row text-center">
+                <div class="form-group col-md-6">
+                    <label for="tipome">Tipo Medida:</label>
+                    <select class="form-control" name="tipome" id="tipome">
                         <?php
                             $tipos = mysqli_query($conexion, "SELECT * FROM variables")
                                 or die("Problemas en la consulta: ".mysqli_error($conexion));
@@ -48,19 +50,14 @@
                         ?>
                     </select>
                 </div>
-               
-            </div>
-            <!-- VALOR MEDIDA -->
-            <div class="form-group row">
-            <label for="valor" class="col-sm-2 col-form-label col-form-label-lg">Valor Medida:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-lg" name="valorme" id="valor">
-                </div>
             </div>
 
-            <!-- BUSCAR -->
-            <div class="form-group row">
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Buscar</button>
+            <!-- VALOR MEDIDA -->
+            <div class="form-row text-center">
+                <div class="form-group col-md-6">
+                    <label for="valor">Valor Medida:</label>
+                    <input type="range" class="form-control" name="valorme" id="valor">
+                </div>
             </div>
         </form>
 
