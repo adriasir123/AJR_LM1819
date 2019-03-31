@@ -10,12 +10,14 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
     <style>
         body {
             background-color: #000000;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
             background-attachment: fixed;
             background-size: cover;
+            font-family: 'Concert One', cursive;
         }
     </style>
 </head>
@@ -34,23 +36,23 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="file1.php">Inicio</a>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link3</a>
+                    </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Escribe aquí..." aria-label="Search">
+                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </div>
         </nav>
@@ -60,7 +62,7 @@
             ############################
         -->
         
-        <h1 class="display-1 text-center">Weather Station</h1>
+        <h1 class="display-1 text-center">Estación Meteorológica</h1>
         
         <!-- 
             ############################
@@ -72,22 +74,22 @@
                 <div class="col">
 
                     <!-- LÍNEA DE FECHA DESDE -->
-                    <div class="row" style="background-color: yellow">
+                    <div class="row" style="background-color: rgb(239,0,0, 0.6)">
                         <div class="col">
-                            <div class="row">
+                            <div class="text-center align-middle">
                                 <label for="fechadesde">Fecha desde:</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="row">
-                                <input type="date" class="form-control" name="fechadesde" id="fechadesde">
+                                <input type="date" class="form-control form-control-lg" name="fechadesde" id="fechadesde">
                             </div>
                         </div>
                     </div>
 
                     <!-- LÍNEA DE FECHA HASTA -->
 
-                    <div class="row" style="background-color: blue">
+                    <div class="row" style="background-color: rgb(239,0,0, 0.6)">
                         <div class="col">
                             <div class="row">
                                 <label for="fechahasta">Fecha hasta:</label>
@@ -95,14 +97,14 @@
                         </div>
                         <div class="col">
                             <div class="row">
-                                <input type="date" class="form-control" name="fechahasta" id="fechahasta">
+                                <input type="date" class="form-control form-control-lg" name="fechahasta" id="fechahasta">
                             </div>
                         </div>
                     </div>
 
                     <!-- LÍNEA DE TIPO DE MEDIDA -->
 
-                    <div class="row" style="background-color: brown">
+                    <div class="row" style="background-color: rgb(239,0,0, 0.6)">
                         <div class="col">
                             <div class="row">
                                 <label for="tipome">Tipo Medida:</label>
@@ -110,7 +112,7 @@
                         </div>
                         <div class="col">
                             <div class="row">
-                                <select class="form-control" name="tipome" id="tipome">
+                                <select class="form-control form-control-lg" name="tipome" id="tipome">
                                     <?php
                                         $tipos = mysqli_query($conexion, "SELECT * FROM variables")
                                             or die("Problemas en la consulta: ".mysqli_error($conexion));
@@ -126,7 +128,7 @@
 
                     <!-- LÍNEA DE VALOR DE MEDIDA -->
 
-                    <div class="row" style="background-color: magenta">
+                    <div class="row" style="background-color: rgb(239,0,0, 0.6)">
                         <div class="col">
                             <div class="row">
                                 <label for="valor">Valor Medida:</label>
@@ -134,7 +136,7 @@
                         </div>
                         <div class="col">
                             <div class="row">
-                                <input type="range" class="form-control" name="valorme" id="valor">
+                                <input type="range" class="form-control form-control-lg" name="valorme" id="valor">
                             </div>
                         </div> 
                     </div>
@@ -145,7 +147,7 @@
 
                 <div class="col">
                     <div class="row" style="height:100%;">
-                        <button type="submit" class="btn btn-primary btn-block"><img src="search.png" alt="Buscar" style="height:100%;width:25%"></button>
+                        <button type="submit" class="btn btn-primary btn-block btn-warning"><img src="search.png" alt="Buscar" style="height:100%;width:30%"></button>
                     </div>
                 </div>
             </div>
@@ -156,53 +158,11 @@
             ############################
         -->
 
-
-
-
-        <h1 class="display-1 text-center">Weather Station</h1>
-        <form action="file1.php">
-            <!-- CAMPOS: FECHA DESDE, FECHA HASTA  -->
-            <div class="form-row text-center">
-                <div class="form-group col-md-3">
-                    <label for="fechadesde">Fecha desde:</label>
-                    <input type="date" class="form-control" name="fechadesde" id="fechadesde">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="fechahasta">Fecha hasta:</label>
-                    <input type="date" class="form-control" name="fechahasta" id="fechahasta">
-                </div>
-                <!-- BUSCAR -->
-                <div class="form-group col-md-6">
-                    <button type="submit" class="btn btn-primary btn-block" style="height:300px">Buscar</button>
-                </div>
-            </div>
-
-            <!-- TIPO MEDIDA -->
-            <div class="form-row text-center">
-                <div class="form-group col-md-6">
-                    <label for="tipome">Tipo Medida:</label>
-                    <select class="form-control" name="tipome" id="tipome">
-                        <?php
-                            $tipos = mysqli_query($conexion, "SELECT * FROM variables")
-                                or die("Problemas en la consulta: ".mysqli_error($conexion));
-
-                            while ($reg = mysqli_fetch_array($tipos)) {
-                                echo "<option value='$reg[id]'>$reg[desc]</option>";
-                            }
-                        ?>
-                    </select>
-                </div>
-            </div>
-
-            <!-- VALOR MEDIDA -->
-            <div class="form-row text-center">
-                <div class="form-group col-md-6">
-                    <label for="valor">Valor Medida:</label>
-                    <input type="range" class="form-control" name="valorme" id="valor">
-                </div>
-            </div>
-        </form>
-
+        <!-- 
+            ############################
+                    MOSTRAR DATOS 
+            ############################
+        -->
 
         <table class="table table-striped table-dark text-center">
             <thead>
@@ -228,6 +188,15 @@
 
         <button type="button" class="btn btn-danger btn-block">Restablecer</button>
         
+
+        <!--Credits-->
+        <div>
+            <hr>
+            <p style="text-align: center">Desarrollado en el <a href="https://www.iesciudadjardin.es/">IES Ciudad Jardín</a> con mucho ❤ y ☕</p>
+            <p style="text-align: center">por el grupo 1º ASIR 🤓👍</p>
+        </div>
+
+
         <?php
             //$fechadesde = trim(htmlspecialchars(strip_tags($_REQUEST["fechadesde"]), ENT_QUOTES, "UTF-8"));
             //$fechahasta = trim(htmlspecialchars(strip_tags($_REQUEST["fechahasta"]), ENT_QUOTES, "UTF-8"));
@@ -254,8 +223,7 @@
 
 
 
-
-
+  
 
 
     <!-- Optional JavaScript -->
