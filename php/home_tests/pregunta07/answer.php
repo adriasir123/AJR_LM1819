@@ -23,7 +23,8 @@
             echo "$reg[mail]";
             echo "$reg[nombreCurso]";
         } else {
-            echo "El email no existe en la base de datos";
+            setcookie("error", "error", 0);
+            header("Location: form.php");
         }
 
         mysqli_close($conexion);

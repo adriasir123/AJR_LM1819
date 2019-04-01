@@ -66,6 +66,38 @@
         
         <!-- 
             ############################
+                  FORMULARIO INLINE
+            ############################
+        -->
+
+        <form class="form-inline" action="file1.php">
+            <div class="row">
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form> 
+
+
+
+
+        <!-- 
+            ############################
+               FIN FORMULARIO INLINE
+            ############################
+        -->
+
+        <!-- 
+            ############################
                      FORMULARIO 
             ############################
         -->
@@ -76,7 +108,7 @@
                     <!-- LÍNEA DE FECHA DESDE -->
                     <div class="row" style="background-color: rgb(239,0,0, 0.6)">
                         <div class="col">
-                            <div class="text-center align-middle">
+                            <div class="text-center">
                                 <label for="fechadesde">Fecha desde:</label>
                             </div>
                         </div>
@@ -91,7 +123,7 @@
 
                     <div class="row" style="background-color: rgb(239,0,0, 0.6)">
                         <div class="col">
-                            <div class="row">
+                            <div class="text-center">
                                 <label for="fechahasta">Fecha hasta:</label>
                             </div>
                         </div>
@@ -106,7 +138,7 @@
 
                     <div class="row" style="background-color: rgb(239,0,0, 0.6)">
                         <div class="col">
-                            <div class="row">
+                            <div class="text-center">
                                 <label for="tipome">Tipo Medida:</label>
                             </div>
                         </div>
@@ -130,7 +162,7 @@
 
                     <div class="row" style="background-color: rgb(239,0,0, 0.6)">
                         <div class="col">
-                            <div class="row">
+                            <div class="text-center">
                                 <label for="valor">Valor Medida:</label>
                             </div>
                         </div>
@@ -159,59 +191,60 @@
         -->
 
         <!-- 
-            ############################
-                    MOSTRAR DATOS 
-            ############################
+            #####################################
+                  CÓDIGO PHP MOSTRAR DATOS 
+            #####################################
         -->
-
-        <table class="table table-striped table-dark text-center">
-            <thead>
-                <tr>
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Unidad Medida</th>
-                    <th scope="col">Sensor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-            </tbody>
-        </table>
-
-
-        <button type="button" class="btn btn-danger btn-block">Restablecer</button>
-        
-
-        <!--Credits-->
-        <div>
-            <hr>
-            <p style="text-align: center">Desarrollado en el <a href="https://www.iesciudadjardin.es/">IES Ciudad Jardín</a> con mucho ❤ y ☕</p>
-            <p style="text-align: center">por el grupo 1º ASIR 🤓👍</p>
-        </div>
-
-
         <?php
-            //$fechadesde = trim(htmlspecialchars(strip_tags($_REQUEST["fechadesde"]), ENT_QUOTES, "UTF-8"));
-            //$fechahasta = trim(htmlspecialchars(strip_tags($_REQUEST["fechahasta"]), ENT_QUOTES, "UTF-8"));
-            //$tipome = trim(htmlspecialchars(strip_tags($_REQUEST["tipome"]), ENT_QUOTES, "UTF-8"));
-            // $valorme = trim(htmlspecialchars(strip_tags($_REQUEST["valorme"]), ENT_QUOTES, "UTF-8"));
+            if (!empty($_REQUEST)) {
+                /*$fechadesde = trim(htmlspecialchars(strip_tags($_REQUEST["fechadesde"]), ENT_QUOTES, "UTF-8"));
+                $fechahasta = trim(htmlspecialchars(strip_tags($_REQUEST["fechahasta"]), ENT_QUOTES, "UTF-8"));
+                $tipome = trim(htmlspecialchars(strip_tags($_REQUEST["tipome"]), ENT_QUOTES, "UTF-8"));
+                 $valorme = trim(htmlspecialchars(strip_tags($_REQUEST["valorme"]), ENT_QUOTES, "UTF-8"));
 
-            $conexion = mysqli_connect("localhost", "root", "", "cursophp")
-            or die("Problemas de conexión");
-            mysqli_query($conexion,
-            "INSERT INTO alumnos(nombre, mail, codigocurso) VALUES ('$nombre','$email',$curso)") //Se ponen comillas porque son cadenas de texto, y no se le ponen en curso porque se almacenan números
-            or die("Problemas en el insert". mysqli_error($conexion));
+                mysqli_query($conexion,
+                "INSERT INTO alumnos(nombre, mail, codigocurso) VALUES ('$nombre','$email',$curso)") //Se ponen comillas porque son cadenas de texto, y no se le ponen en curso porque se almacenan números
+                or die("Problemas en el insert". mysqli_error($conexion));
 
-            mysqli_close($conexion);
+                mysqli_close($conexion);
 
-            print "<h2>Alumno dado de alta</h2>";
+                print "<h2>Alumno dado de alta</h2>";*/
+                echo "hola";
+            } else {
+                $completo=mysqli_query($conexion,
+                                        "select m.fecha_hora f, v.nombre t, m.valor v, v.ud_med u, s.id i
+                                            from variables v
+                                            INNER JOIN medidas m ON v.id = m.id_variable
+                                            INNER JOIN sensores s ON m.id_sensor = s.id")
+                or die("Problemas en la consulta:".mysqli_error($conexion)); ?>
+
+
+                <table class="table table-striped table-dark text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Unidad Medida</th>
+                            <th scope="col">Sensor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        while ($comp = mysqli_fetch_array($completo)) {
+                            echo "<tr>";
+                                echo "<td scope='row'>" . $comp['f'] . "</td>";
+                                echo "<td>" . $comp['t'] . "</td>";
+                                echo "<td>" . $comp['v'] . "</td>";
+                                echo "<td>" . $comp['u'] . "</td>";
+                                echo "<td>" . $comp['i'] . "</td>";
+                            echo "</tr>"; 
+                        }
+                        ?>
+                    </tbody>
+                </table> <?php
+            }
+
 
 
 
@@ -219,7 +252,39 @@
 
 
         ?>
+   
+        <!-- 
+            #####################################
+                 FIN CÓDIGO PHP MOSTRAR DATOS 
+            #####################################
+        -->
+
+        <!-- 
+            ############################
+                     CRÉDITOS 
+            ############################
+        -->
+        <div>
+            <hr>
+            <p style="text-align: center">Desarrollado en el <a href="https://www.iesciudadjardin.es/">IES Ciudad Jardín</a> con mucho ❤ y ☕</p>
+            <p style="text-align: center">por el grupo 1º ASIR 🤓👍</p>
+        </div>
+    
+        <!-- 
+            ############################
+                   FIN CRÉDITOS 
+            ############################
+        -->
+
+   
+   
+   
     </div>
+    <!-- 
+        ############################
+               FIN CONTAINER 
+        ############################
+    -->
 
 
 
