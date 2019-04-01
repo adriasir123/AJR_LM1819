@@ -14,6 +14,11 @@
         <label for="email">Email: </label>
         <input type="text" name="email" id="email"><br/>
 
+        <?php
+          if (isset($_COOKIE["error"])) {
+            echo "$_COOKIE['error']";
+          }
+        ?>
         <input type="submit" value="Enviar">
     </form>
 </body>
