@@ -4,7 +4,7 @@ sensores
 medidas
 variables
 
-//Nombre de los campos nombradoss
+//Nombre de los campos nombradosss
 f1
 f2
 tm
